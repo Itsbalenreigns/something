@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Something</title>
+</head>
+<body>
+
+    <div id="container">
+        <h2>Will you be my girlfriend?</h2>
+        <button id="yesBtn" class="yes" onclick="showMessage()">Yes</button>
+        <button class="no" onclick="increaseYesSize()">No</button>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById('container').innerHTML = "<h2>Thank You for coming into my life! ❤️ I love you. ❤️</h2>";
+        }
+
+        function increaseYesSize() {
+            let yesButton = document.getElementById("yesBtn");
+            let currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+            yesButton.style.fontSize = (currentSize + 5) + "px";
+            yesButton.style.padding = (currentSize + 5) + "px";
+        }
+    </script>
+
+</body>
+</html>
